@@ -1,12 +1,17 @@
-This bot does exactly what it is intented to do! If you want other features (e.g. editing messages, updating messages, etc), you have to customize it for yourself. Reading [python-telegram](http://python-telegram.readthedocs.io/) and [TDlib](https://core.telegram.org/tdlib/docs/) documentation may help you for doing so.
-
-**PLEASE DON'T ASK FOR NEW FEATURES!**
-
 # Telegram Copy Bot
 
+A lightweight Telegram copy bot focused on reliable message copying from one chat to another.
 
 ## What it does
 This bot copies (not forward) messages from a source channel (which doesn't have administrator privileges on it) to a destination chat (simple user, channel, etc.).
+
+## Customization
+This project is intentionally kept simple and focused. If you need extra behavior (for example editing copied messages, handling updates differently, or adding filters), you can customize the bot for your own workflow.
+
+To customize confidently:
+- Review the implementation in `app/main.py` to understand the current message handling flow.
+- Refer to [python-telegram](http://python-telegram.readthedocs.io/) for client usage patterns.
+- Refer to [TDLib documentation](https://core.telegram.org/tdlib/docs/) for protocol-level capabilities and limits.
 
 ## How to use
 1. Copy `.env.example` to `.env`.
@@ -29,4 +34,3 @@ This bot copies (not forward) messages from a source channel (which doesn't have
         -v td-data:/tmp/.tdlib_files \
         radinshayanfar/tgcopybot
     ```
-
